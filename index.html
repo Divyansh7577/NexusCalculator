@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Calculator - Neon Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font for Futuristic Look -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="nexus-container">
+        <div class="header">
+            <h1>NEXUS <span class="neon-glow">CALCULATOR</span></h1>
+            <div class="status-dot"></div>
+        </div>
+
+        <div class="calculator-box">
+            <!-- Screen Display -->
+            <div id="display" class="display">0</div>
+
+            <!-- Keypad Buttons -->
+            <div class="keypad">
+                <button class="btn functional" onclick="clearAll()">AC</button>
+                <button class="btn functional" onclick="deleteLast()">DEL</button>
+                <button class="btn operator" onclick="appendValue('%')">%</button>
+                <button class="btn operator" onclick="appendValue('/')">÷</button>
+
+                <button class="btn" onclick="appendValue('7')">7</button>
+                <button class="btn" onclick="appendValue('8')">8</button>
+                <button class="btn" onclick="appendValue('9')">9</button>
+                <button class="btn operator" onclick="appendValue('*')">×</button>
+
+                <button class="btn" onclick="appendValue('4')">4</button>
+                <button class="btn" onclick="appendValue('5')">5</button>
+                <button class="btn" onclick="appendValue('6')">6</button>
+                <button class="btn operator" onclick="appendValue('-')">-</button>
+
+                <button class="btn" onclick="appendValue('1')">1</button>
+                <button class="btn" onclick="appendValue('2')">2</button>
+                <button class="btn" onclick="appendValue('3')">3</button>
+                <button class="btn operator" onclick="appendValue('+')">+</button>
+
+                <button class="btn zero" onclick="appendValue('0')">0</button>
+                <button class="btn" onclick="appendValue('.')">.</button>
+                <button class="btn equals" onclick="calculateResult()">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
